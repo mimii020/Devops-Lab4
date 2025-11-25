@@ -32,7 +32,6 @@ jobs:
   ci:
     name: continuous-integration
     runs-on: ubuntu-latest
-    needs: [terraform-prep]
     steps:
       - name: terraform-setup
         uses: hashicorp/setup-terraform@v2
