@@ -24,7 +24,7 @@ resource "docker_container" "web-app-container" {
   image = docker_image.web-app-image.name
   name = "web-app-container"
   ports {
-    internal = 80
-    external = 8080
+    internal = var.app-port-internal
+    external = var.app-port-external
   }
 }

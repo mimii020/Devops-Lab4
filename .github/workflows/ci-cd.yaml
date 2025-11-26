@@ -4,31 +4,6 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  # terraform-prep:
-  #   name: terraform-preparation
-  #   runs-on: ubuntu-latest
-  #   steps: 
-  #     - name: terraform-setup
-  #       uses: hashicorp/setup-terraform@v2
-  #       with:
-  #         terraform_version: 1.14.0
-      # - name: system-update-and-packages-installation
-      #   run: sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
-      # - name: gpg-key-installation
-      #   run: wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-      # - name: gpg-key-fingerprint-verification
-      #   run: | 
-      #     gpg --no-default-keyring \
-      #     --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
-      #     --fingerprint
-      # - name: add-hashicorp-repo-to-system
-      #   run: | 
-      #     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main"  
-      #     | sudo tee /etc/apt/sources.list.d/hashicorp.list
-      # - name: package-update
-      #   run: sudo apt update
-      # - name: terraform-installation
-      #   run: sudo apt-get install terraform
   ci-cd:
     name: continuous-integration-continuous-deployment
     runs-on: ubuntu-latest
