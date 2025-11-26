@@ -4,7 +4,7 @@ resource "docker_image" "postgres" {
 
 resource "docker_container" "my-postgres" {
   image = docker_image.postgres.name
-  name  = "postgres-container"
+  name  = "new-gres-container"
   env = ["POSTGRES_PASSWORD=${var.db_password}", "POSTGRES_USER=${var.db_user}", "POSTGRES_DB=${var.db_name}"]
   ports {
     internal = var.db_port
